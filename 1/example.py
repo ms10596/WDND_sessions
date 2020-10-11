@@ -1,4 +1,5 @@
 import psycopg2
+
 import random
 host = "localhost"
 user = "postgres"
