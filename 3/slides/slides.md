@@ -20,10 +20,10 @@ theme: gaia
 
 ---
 ### Ways to pass data to flask server.
-1. 
-2. 
-3. 
-4. 
+1. Query parameters -> GET
+2. Path variable -> GET
+3. Json body -> POST
+4. From -> POST
 
 ---
 ![](udacity.gif)
