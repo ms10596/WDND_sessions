@@ -1,6 +1,7 @@
 from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+
 import random
 
 
@@ -10,13 +11,13 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:postgres@localhos
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]= False
 
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+migrate  = Migrate(app, db, compare_type=True)
 
 class User(db.Model):
     __tablename__ =  "users"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String())
-    posts = db.relationship("Post", backref="user")
+    posts = db.relationship("Post")
     def __repr__(self):
         return f"{self.id}.{self.name}"
 
@@ -24,38 +25,40 @@ class Post(db.Model):
     __tablename__ = "posts"
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.String())
-    created_at = db.Column(db.DateTime)
+    created_at = db.Column(db.Boolean)
     user_id = db.Column(db.Integer, db.ForeignKey(User.id))
+    
     def __repr__(self):
         return f"{self.id}.{self.body}-{self.user_id}"
+
+db.create_all()
 
 
 @app.route("/")
 def index():
     name = request.args.get("name")
     return {
-        "Hello": name
+        "Hello": f"{name}"
     }
 
 @app.route("/<name>")
-def other_way(name):
-     return {
-        "Hello": name
+def second(name):
+    return {
+        "Hello": f"{name}"
+    }
+    
+@app.route("/form", methods=["POST"])
+def third():
+    name = request.form.get("name")
+    return {
+        "Hello": f"{name}"
     }
 
 @app.route("/", methods=["POST"])
-def third_way():
-    body = request.get_json()
-    # print(body)
+def fourth():
+    name = request.get_json()['name']
     return {
-        "Hello": body.get("name")
-    }
-
-@app.route("/form", methods=["POST"])
-def fourth_way():
-    name = request.form.get("name")
-    return {
-        "Hello": name
+        "hello": name
     }
 
 
@@ -99,9 +102,19 @@ def get_posts_by_user_id(id:int):
     
 
 def get_posts_by_username(user_name: str):
-    # return db.session.query(User, Post).join(Post).filter(User.name == user_name).all()
-    new_user = User.query.filter((User.name == user_name)).first()
-    return new_user.posts
+    user_x = User.query.filter(User.name == user_name).first()
+    return user_x.posts
+
+
+
+
+
+
+
+
+
+
+
 
 def get_user_by_postid(post_id: int):
     new_post = Post.query.get(post_id)
