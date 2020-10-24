@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <script>
+        function foo() {
+            fetch("https://api.github.com/users/" + document.getElementById("username").value).then(
+                response => response.json().then(
+                    response => document.getElementById("img").src = response["avatar_url"]
+                )
+            )
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="username">
+    <input type="submit" onclick="foo()">
+    <img id="img" src="">
+
+</body>
+
+</html>
