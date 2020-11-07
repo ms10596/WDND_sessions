@@ -1,6 +1,4 @@
-
 from flask_sqlalchemy import SQLAlchemy
-
 
 db = SQLAlchemy()
 
@@ -10,12 +8,16 @@ def setup_db(app):
     db.app = app
     db.init_app(app)
     db.create_all()
-   
+
+
+
 class User(db.Model):
     __tablename__ =  "users"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String())
     posts = db.relationship("Post")
+    def __repr__(self):
+        return f"{self.id}.{self.name}"
 
 class Post(db.Model):
     __tablename__ = "posts"
@@ -30,4 +32,5 @@ class Post(db.Model):
             "body": self.body,
             "user_id": self.user_id
         }
+    
 
