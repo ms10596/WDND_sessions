@@ -1,23 +1,39 @@
 import unittest
 from app import create_app
+from models import Post, setup_db
 
-class TestingApp(unittest.TestCase):
+
+class TestPosts(unittest.TestCase):
     def setUp(self):
         self.app = create_app()
         self.client = self.app.test_client
 
-    def test_length_of_output(self):
-        """tests the length of the posts that is returned to homepage"""
+
+    # def tearDown(self):
+    #     last_post = Post.query.get(self.last_id)
+    #     last_post.delete()
+
+    def test_number_of_posts(self):
+        """Testing number of returned posts from endpoint"""
         res = self.client().get("/posts")
-        res_json = res.json
-        self.assertEqual(len(res_json["posts"]), 10)
+        self.assertNotEqual(res.json, None)
+        self.assertEqual(len(res.json["posts"]), 10)
         self.assertEqual(res.status_code, 200)
-        self.assertEqual(res.status, "200 OK")
-    
-    def test_unknown_page(self):
-        """test unknown page"""
-        res = self.client().get("/posts?page=100")
-        self.assertEqual(res.status_code, 404)
+
+    def test_not_found_post(self):
+        """Testing if the post with id 100 is found or not"""
+        res = self.client().get("/posts/100")
+        self.assertEqual(res.status_code, 422)
+
+    def test_post_id(self):
+        res = self.client().get("/posts/5")
+        db_post = Post.query.get(5)
+        self.assertEqual(res.json["post"]["body"], db_post.body)
+
+    def test_insert(self):
+        res = self.client().post("/posts")
+        self.assertEqual(res.status_code, 200)
+
 
 
 

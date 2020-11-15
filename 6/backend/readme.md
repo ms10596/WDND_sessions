@@ -1,75 +1,53 @@
-# MyFacebook
+# My facebook
 
-## Description
-
+This project illlusterates my understanding in flask and SQLAclhemy.
 
 ## Installation
-```$ pip install -r requirements.txt```
+```pip install -r requirements.txt```
 
-## Run
-```
-$ export FLASK_APP = app
-$ flask run
-```
+## How to run app
+```flask run```
+
 
 ## API Documentation
-GET /posts?page=1
-* Returns json object having lists of 10 posts and total number of posts
+GET /posts
+* This endpoint returns list of posts
+* Query parameters `?page=5` page of the posts
+
 ```
-curl https://localhost:5000/posts
+curl http://localhost:5000/posts?page=5
 {
-    "posts": [
-        {
-            "body": "سمكة التونة العنيدة",
-            "id": 3,
-            "user_id": 4
-        },
-        {
-            "body": "Playing chess",
-            "id": 4,
-            "user_id": 6
-        },
-        {
-            "body": "Watching World Cup with the family",
-            "id": 5,
-            "user_id": 5
-        },
-        {
-            "body": "Playing chess",
-            "id": 6,
-            "user_id": 6
-        },
-        {
-            "body": "سمكة التونة العنيدة",
-            "id": 7,
-            "user_id": 5
-        },
-        {
-            "body": "Playing chess",
-            "id": 8,
-            "user_id": 5
-        },
-        {
-            "body": "لن أعيش في جلباب أبي",
-            "id": 9,
-            "user_id": 4
-        },
-        {
-            "body": "Playing chess",
-            "id": 10,
-            "user_id": 4
-        },
-        {
-            "body": "I have just completed the Web Development Track from FWD",
-            "id": 11,
-            "user_id": 1
-        },
-        {
-            "body": "Watching World Cup with the family",
-            "id": 12,
-            "user_id": 7
-        }
-    ],
-    "total": 48
+  "posts": [
+    {
+      "body": "Earth is flat", 
+      "id": 43, 
+      "user_id": 6
+    }, 
+    {
+      "body": "\u0639\u064a\u062f \u0633\u0639\u064a\u062f", 
+      "id": 44, 
+      "user_id": 3
+    }, 
+    {
+      "body": "\u0644\u0646 \u0623\u0639\u064a\u0634 \u0641\u064a \u062c\u0644\u0628\u0627\u0628 \u0623\u0628\u064a", 
+      "id": 45, 
+      "user_id": 4
+    }, 
+    {
+      "body": "Happy New Year", 
+      "id": 46, 
+      "user_id": 7
+    }, 
+    {
+      "body": "Playing chess", 
+      "id": 47, 
+      "user_id": 6
+    }, 
+    {
+      "body": "\u0644\u0646 \u0623\u0639\u064a\u0634 \u0641\u064a \u062c\u0644\u0628\u0627\u0628 \u0623\u0628\u064a", 
+      "id": 48, 
+      "user_id": 1
+    }
+  ]
 }
 ```
