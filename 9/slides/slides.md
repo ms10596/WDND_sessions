@@ -8,6 +8,7 @@ theme: gaia
 ## Agenda
 * coffe_shop project.
 * Deploy flask app.
+* Open Discussion.
 ---
 
 ![bg 75%](../../udacity.gif)
