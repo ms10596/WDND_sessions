@@ -74,6 +74,6 @@ Persist data, Central, Concurrency, Easy to retrieve.
 *request*: Any sql query like insert, select, update or delete
 
 ---
-![](udacity.gif)
+![](../../udacity.gif)
 
 > [_](https://forms.gle/1DkbXjsJ5mNyFgQw6)

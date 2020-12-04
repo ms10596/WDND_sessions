@@ -34,6 +34,6 @@ theme: gaia
 ---
 
 ---
-![](udacity.gif)
+![](../../udacity.gif)
 
 > [_](https://forms.gle/6VWM7PMfopHMi7CY6)
