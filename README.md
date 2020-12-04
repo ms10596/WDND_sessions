@@ -3,7 +3,7 @@
 
 > C2, C4, C6
 
- # WeeK | 	Session | 	Study
+Week # | Session | Study
 --- | --- | ---
 Week 1 |	SQL and Data Modeling for the Web	|   Course introduction <br> Interacting with databases
 Week 2	| SQL and Data Modeling for the Web |  SQLAlchemy basics SQLAlchemy <br> ORM in depth
