@@ -56,18 +56,17 @@ theme: gaia
 * Nodejs-12.18 (later projects)
 ---
 ## Relational Database.
-
+Structured tabular way to store data on disk in a fast and efficient way for insertion and retrieval.
 * Database Server.
-    * 
+    * MySQl, SQL-server, **PostgresQL**, oracle, Sqlite, MariaDB
+    * Firebase, Mongodb(Non relational)
 * Database Client.
-    * 
+    * Phpmyadmin, SQL server management studio, **PSQL**, **Pgadmin** 
 * Database Connector(DBAPIs).
-    * 
+    * **psycopg2**, **sqlaclhmey**
 ---
 ![](client-server)
 *request*: Any sql query like insert, select, update or delete
 
 ---
-![bg auto](../../udacity.gif)
-
-> [_](https://forms.gle/1DkbXjsJ5mNyFgQw6)
+![bg auto](https://raw.githubusercontent.com/ms10596/WDND_sessions/main/udacity.gif)
