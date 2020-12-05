@@ -25,8 +25,8 @@ theme: gaia
 
 ---
 ## 2. Communication throughout the week.
-![](https://aem.dropbox.com/cms/content/dam/dropbox/www/en-us/business/app-integrations/slack/Slack_logo_new.png)
-[link](https://join.slack.com/t/egypt-fwd-october/shared_invite/zt-i2r17368-ELY~Ag9tUN10Er8tKfTIRQ)
+![width:1000](https://aem.dropbox.com/cms/content/dam/dropbox/www/en-us/business/app-integrations/slack/Slack_logo_new.png)
+[link](https://join.slack.com/t/egypt-fwd-december/shared_invite/zt-jld49t7n-Kpd0aX6uO2QiLMMkOTS7PQ)
 
 ---
 ## 3. Projects and Plagiarism
@@ -38,22 +38,16 @@ theme: gaia
 ## Who am I? 
 > Mohamed Sayed
 * Udacity 
-    * Session Lead in Intro to programming Nanodegree.
+    * Session Lead in IPND & WDND (C2, C4, C6).
     * Project Reviewer in Cloud Developer for Enterprise.
-    * Session Lead in Advanced Web Development.
 * Data Scientist at Optomatica.
-![](https://avatars2.githubusercontent.com/u/25807671)
+![width:100](https://avatars2.githubusercontent.com/u/25807671)
 ---
 ## 4. Open Discussion.
 - What are you currently doing?
 - What are you planning to achieve?
 ![](https://media.giphy.com/media/bal0OZzvIWGoU/giphy.gif)
 [hint](https://roadmap.sh/backend)
-
----
-## Weekly Schedule
-[link](https://docs.google.com/spreadsheets/d/1aoy2YwR0GlgoGt-5NyadhebP5ylseLPB-4eBRfnrfOc/edit#gid=1338436519)
-
 ---
 ## Tools and Software
 * Python3.7
@@ -74,6 +68,6 @@ Persist data, Central, Concurrency, Easy to retrieve.
 *request*: Any sql query like insert, select, update or delete
 
 ---
-![](../../udacity.gif)
+![bg auto](../../udacity.gif)
 
 > [_](https://forms.gle/1DkbXjsJ5mNyFgQw6)
