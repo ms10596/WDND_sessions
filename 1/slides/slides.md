@@ -13,13 +13,12 @@ theme: gaia
 5. Relational Database.
 ---
 ## 1. Introduction on Weekly Sessions.
-* Group of Udacity students with a Session Leader.
-* Setting weekly targets.
-* Helping each other.
+* Setting weekly targets and Helping each other.
 * Our Goals:
     * High Completion Rate.
     * High satisfaction.
-* Once a week and your presence is recorded.
+* Once a week (1 - 2 hours) 
+* Your presence is recorded.
 * Raise your hand if you want to ask a question or to participate. 
 * Please, try to engage as much as possible in the session.
 
@@ -46,23 +45,24 @@ theme: gaia
 ## 4. Open Discussion.
 - What are you currently doing?
 - What are you planning to achieve?
-![](https://media.giphy.com/media/bal0OZzvIWGoU/giphy.gif)
+![width:500](https://media.giphy.com/media/bal0OZzvIWGoU/giphy.gif)
 [hint](https://roadmap.sh/backend)
 ---
 ## Tools and Software
-* Python3.7
+* Python-3.7
 * Python editor like VScode or IDE like Pycharm.
-* Postgres Server.
-* Postgres Client like psql12.4
+* Postgres Server-12.5.
+* Postgres Client like psql-12.5
+* Nodejs-12.18 (later projects)
 ---
 ## Relational Database.
-Persist data, Central, Concurrency, Easy to retrieve.
+
 * Database Server.
-    * SQL Server, Oracle, Mongodb(not relational), **Postgress**
+    * 
 * Database Client.
-    * MSSQL Management Studio, **PgAdmin**, **Psql**, Navicat, phpmyadmin.
+    * 
 * Database Connector(DBAPIs).
-    * **psycopg2**, **SQLAclhemy**
+    * 
 ---
 ![](client-server)
 *request*: Any sql query like insert, select, update or delete
