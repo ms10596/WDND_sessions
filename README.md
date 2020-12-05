@@ -15,3 +15,97 @@ Week 7 | 	Identity and Access Management | Foundation <br> Identity and Authenti
 Week 8	| Identity and Access Management |	Passwords <br> Access and Authorization
 Week 9	| Identity and Access Management |	Thinking Adversarially <br> **Submit P3: Coffee shop full stack**
 
+# FAQ
+I tried to graduate through submitting My Personal ID Card But I Get this error( Error: Unsupported document type)
+> Try a valid passport or driving license or you can send [email](fwd-support@udacity.com) to the support team with your personal ID and they should graduate you manually.
+
+
+Trivia Project return data
+```
+{
+    "categories": {
+        "1": "Science",
+        "2": "Art",
+        "3": "Geography",
+        "4": "History",
+        "5": "Entertainment",
+        "6": "Sports"
+    }
+}
+```
+```
+{
+    "categories": {
+        "1": "Science",
+        "2": "Art",
+        "3": "Geography",
+        "4": "History",
+        "5": "Entertainment",
+        "6": "Sports"
+    },
+    "currentCategory": [
+        4,
+        4,
+        5,
+        5,
+        5,
+        6,
+        6,
+        4,
+        3,
+        3
+    ],
+    "questions": [
+        {
+            "answer": "Maya Angelou",
+            "category": 4,
+            "difficulty": 2,
+            "id": 5,
+            "question": "Whose autobiography is entitled 'I Know Why the Caged Bird Sings'?"
+        },
+        {
+            "answer": "Apollo 13",
+            "category": 5,
+            "difficulty": 4,
+            "id": 2,
+            "question": "What movie earned Tom Hanks his third straight Oscar nomination, in 1996?"
+        }
+    ],
+    "total_questions": 2
+}
+```
+
+Backend errors in Trivia project
+> pip install --upgrade werkzeug
+
+The `ALL` category id in Trivia Project
+> 0
+
+Paginate in Flask-sqlalchemy
+> https://flask-sqlalchemy.palletsprojects.com/en/2.x/api/#flask_sqlalchemy.BaseQuery.paginate
+
+Too many files when submitting my project.
+* upload without the node_module and env folders
+* add node_modules to the .gitignore file [just write node_modules in the file]
+
+Applications URIs in Auth0
+* Application Login URI: https://127.0.0.1:8100/tabs/user-page
+* Allowed Callback URLs: http://127.0.0.1:8100/tabs/user-page
+* Allowed Logout URLs: http://127.0.0.1:8100/logout
+
+
+Failures in Postman tests in coffeshop project.
+* Assert 403 instead of 401 in authorizaiton tests.
+* Send recipe as a list of objects.
+```{
+    "title": "Water3",
+    "recipe": [{
+        "name": "Water",
+        "color": "blue",
+        "parts": 1
+    }]
+}
+```
+
+
+
