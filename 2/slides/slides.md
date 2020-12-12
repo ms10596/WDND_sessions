@@ -11,14 +11,13 @@ theme: gaia
 ---
 ## Problems with psycopg2
 1. What are problems of writing raw sql?
-* 
-* 
-* 
+* Limited with the sql dialect.
+* More errors.
+* More copy & paste
 ---
 
 2. How will SQLAlchemy solves them.
-* 
-* 
+* Python code will generate SQL
 
 ---
 ![bg 90%](classes.png)
@@ -28,4 +27,4 @@ theme: gaia
 ---
 
 ---
-![](../../udacity.gif)
+![bg auto](../../udacity.gif)
