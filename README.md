@@ -16,6 +16,12 @@ Week 8	| Identity and Access Management |	Passwords <br> Access and Authorizatio
 Week 9	| Identity and Access Management |	Thinking Adversarially <br> **Submit P3: Coffee shop full stack**
 
 # FAQ
+Setting environment variables
+> *nix based systems: 
+```export FLASK_APP=main FLASK_ENV=development```
+> Windows:
+```set FLASK_APP=main FLASK_ENV=development```
+
 I tried to graduate through submitting My Personal ID Card But I Get this error( Error: Unsupported document type)
 > Try a valid passport or driving license or you can send [email](fwd-support@udacity.com) to the support team with your personal ID and they should graduate you manually.
 
