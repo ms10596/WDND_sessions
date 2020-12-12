@@ -1,36 +1,17 @@
-import  psycopg2
+import psycopg2
 import random
 
 host = "localhost"
 user = "postgres"
 password = "postgres"
-db_name = "saturday"
+dbname = "sunday"
 
-conn = psycopg2.connect(f"host = {host} user={user} password={password} dbname={db_name}")
+connection_string = f"host={host} user={user} password={password} dbname={dbname}"
 
-cur = conn.cursor()
+connection = psycopg2.connect(connection_string)
+cursor = connection.cursor()
 
-# names = ["Abeer", "Ahmed", "Sayed", "Eslam", "Fady", "Hossam"]
-# for name in names:
-#     cur.execute(f"""
-#     --sql
-#     INSERT INTO users(name) values('{name}') 
-#     ;
-#     """)
-
-# conn.commit()
-    
-# cur.execute("""
-# --sql
-# SELECT * from users;
-# ;
-# """)
-
-# res = cur.fetchall()
-
-# print(res)
-
-# cur.execute("""
+# cursor.execute("""
 # --sql
 #  CREATE TABLE posts(
 #      id SERIAL PRIMARY KEY,
@@ -41,32 +22,50 @@ cur = conn.cursor()
 # ;
 # """)
 
-# posts = ["post1", "post2", "post3", "post4"]
-# user_ids = [1,8,9,10, 11, 12, 13]
+# posts = ["Happy birthday", "Watching movies", "Stuck in the traffic", "Working from home", "learning web development"]
 
-# for post in posts:
-#     cur.execute(f"""
+# for i in range(20):
+#      cursor.execute(f"""
 #     --sql
-#     INSERT INTO posts(body, user_id) 
-#     VALUES('{post}', {random.choice(user_ids)}) 
+#     INSERT INTO posts(body, user_id) values('{random.choice(posts)}', {random.choice([1, 7, 8, 9, 10, 11])}) 
 #     ;
 #     """)
-# conn.commit()
 
-cur.execute("""
+
+# connection.commit()
+
+
+
+# names = ["Mohamed", "Amr", "Andrew", "Martina", "Noha"]
+# for name in names:
+#     cursor.execute(f"""
+#     --sql
+#     INSERT INTO users(name) values('{name}') 
+#     ;
+#     """)
+
+# connection.commit()
+# cursor.execute("""
+# --sql
+#  SELECT * FROM users
+# ;
+# """)
+
+# result = cursor.fetchall()
+# print(result)
+
+
+cursor.execute("""
 --sql
-SELECT name, body
+SELECT users.name, COUNT(*) 
 FROM users
 JOIN posts
 ON users.id = posts.user_id
+GROUP BY users.name
+ORDER BY COUNT(*) DESC
 ;
 """)
-res = cur.fetchall()
+
+res = cursor.fetchall()
+
 print(res)
-
-cur.close()
-conn.close()
-
-
-
-

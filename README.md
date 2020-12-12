@@ -45,15 +45,7 @@ Trivia Project return data
     },
     "currentCategory": [
         4,
-        4,
-        5,
-        5,
-        5,
-        6,
-        6,
-        4,
-        3,
-        3
+        5
     ],
     "questions": [
         {
