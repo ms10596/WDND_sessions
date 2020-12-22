@@ -22,6 +22,12 @@ Setting environment variables
 > Windows:
 ```set FLASK_APP=main FLASK_ENV=development```
 
+'NoneType' object has no attribute 'days'
+> In case you are facing this error while trying to run Fyuur project started code.
+You'll need to edit format_datetime function in app.py file.
+Replace the last line of the function with
+```return babel.dates.format_datetime(date, format, locale='en')```
+
 I tried to graduate through submitting My Personal ID Card But I Get this error( Error: Unsupported document type)
 > Try a valid passport or driving license or you can send [email](fwd-support@udacity.com) to the support team with your personal ID and they should graduate you manually.
 

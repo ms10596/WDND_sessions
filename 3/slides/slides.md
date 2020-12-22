@@ -10,8 +10,6 @@ theme: gaia
 2. `db.relationship`
 3. Migrations. 
 4. Ways to pass data to flask server.
-4. A little task on many to many relationships.
-
 ---
 ### Migrations
 * `flask db init`
@@ -20,12 +18,10 @@ theme: gaia
 
 ---
 ### Ways to pass data to flask server.
-1. Query parameter (GET request)
-2. Path parameter
-3. Form data (request POST body)
-4. Json data (request POST body)
+1. Json inside POST request
+2. URL parameters
+3. Forms
+4. Qury parameters
 
 ---
-![](udacity.gif)
-
-> [_](https://forms.gle/isCk9RgPGp5Du4Zo9)
+![bg auto](../../udacity.gif)

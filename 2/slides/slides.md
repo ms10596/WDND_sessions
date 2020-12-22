@@ -11,13 +11,14 @@ theme: gaia
 ---
 ## Problems with psycopg2
 1. What are problems of writing raw sql?
-* Limited with the sql dialect.
-* More errors.
-* More copy & paste
+* Not secure -> SQL injection
+* Different dialects.
+* Not maintanble -> Large code, large copy & paster
+
 ---
 
 2. How will SQLAlchemy solves them.
-* Python code will generate SQL
+* Convert python code to SQL
 
 ---
 ![bg 90%](classes.png)
