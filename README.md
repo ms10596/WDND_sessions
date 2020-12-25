@@ -28,6 +28,21 @@ You'll need to edit format_datetime function in app.py file.
 Replace the last line of the function with
 ```return babel.dates.format_datetime(date, format, locale='en')```
 
+How to store multiple genres for one artist or venue?
+> Easy solution: Use Array type in Postgresql
+> Another solution: Introduce many to many relationship through creating another table `genres` and association table `entity_genres`
+How to get multiple genres as input?
+> request.form.getlist('genres')
+
+Why create_artist form looks bad?
+> remove `id=form.state`
+> {{ form.genres(class_ = 'form-control', placeholder='Genres', autofocus = true) }}
+
+TypeError: Parser must be a string or character stream, not datetime.
+> The template expects datetime to be a string. You may convert it to string before passing it to template.
+Show.query.first().start_time.strftime("%d/%m/%Y, %H:%M")
+
+
 I tried to graduate through submitting My Personal ID Card But I Get this error( Error: Unsupported document type)
 > Try a valid passport or driving license or you can send [email](fwd-support@udacity.com) to the support team with your personal ID and they should graduate you manually.
 
