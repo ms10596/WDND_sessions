@@ -1,48 +1,35 @@
-from flask import Flask, request
+from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 from models import Post, setup_db
 
-POSTS_PER_PAGE = 10
 
 def create_app():
     app = Flask(__name__)
     setup_db(app)
+    cors = CORS(app, origins=["http://localhost:3000"])
+
+    @app.route("/")
+    def index():
+        return "Hello world"
 
     @app.route("/posts")
     def get_posts():
-        page = request.args.get("page", type=int)
-        posts = Post.query.paginate(page, POSTS_PER_PAGE)
-        return {
-            "posts": [post.format() for post in posts.items]
-        }
-    
-    @app.route("/posts/<int:id>")
-    def get_post_by_id(id):
-        post = Post.query.get(id)
-        if post is None:
-            return {
-                "message": "not found"
-            }, 422
-       
-        return {
-            "post": post.format()
-        }
+        page = request.args.get('page', 1, type=int) 
+        posts = Post.query.paginate(page, 5)
 
-    @app.route("/posts", methods=["POST"])
-    def insert_post():
-        try:
-            post = Post(body="udacity", user_id=5)
-            post.insert()
+        total = posts.total
+        posts = posts.items
 
-            return {
-                "message": "inserted successfully"
-            }, 200
-        except:
-            return {
-                "message": "something went wrong"
-            }, 422
+        posts = [i.format() for i in posts]
+        return jsonify(posts=posts, total=total)
 
+    @app.errorhandler(405)
+    def handle405(e):
+        return jsonify(message="Method not allowed"), 405
+
+    @app.errorhandler(404)
+    def handle404(e):
+        return jsonify(message="Page not found"), 404
 
     return app
-
-
-

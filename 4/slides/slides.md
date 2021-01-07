@@ -26,7 +26,7 @@ size: 4k
 ## Response
 * Headers: Provides information.
 * Body: JSON optional data containing the requested resource
-* Status Message
+* Status Code
 
 ---
 |status code|meaning|
@@ -37,6 +37,4 @@ size: 4k
 |4xx| Client Error|
 |5xx| Server Error|
 ---
-![](../../udacity.gif)
-
-> [_](https://forms.gle/mcguaoPY6b8YYazJ8)
+![bg auto](../../udacity.gif)

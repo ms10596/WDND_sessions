@@ -2,22 +2,22 @@
 
 <head>
     <script>
-        function foo() {
-            fetch("https://api.github.com/users/" + document.getElementById("username").value).then(
-                res => res.json().then(
-                    res_json => document.getElementById("img").src = res_json.avatar_url
-                )
-            )
+        async function handleSubmit() {
+            username = document.getElementById('username').value
+            result = await fetch("https://api.github.com/users/" + username)
+            result = await result.json()
+
+            document.getElementById('img').src = result.avatar_url
         }
     </script>
-
 </head>
 
 <body>
-    <input type=text id=username>
-    <input type=button value=submit onclick="foo()">
+    <h1>Hello</h1>
+    <input type="text" id="username">
+    <input type="button" value="submit" onclick="handleSubmit()">
 
-    <img src="" id=img>
+    <img src="" id="img">
 </body>
 
 </html>

@@ -47,6 +47,5 @@ class Mytestcase(unittest.TestCase):
 * How to run test.
 * API documentation.
 ---
-![](../../udacity.gif)
+![bg auto](../../udacity.gif)
 
-> [_](https://docs.google.com/forms/d/e/1FAIpQLScacxSXyhbV65EktKkvTjfDV2HoEHnjM__HEqVBaF4h6e3iNw/viewform?usp=sf_link)

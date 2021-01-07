@@ -42,6 +42,10 @@ TypeError: Parser must be a string or character stream, not datetime.
 > The template expects datetime to be a string. You may convert it to string before passing it to template.
 Show.query.first().start_time.strftime("%d/%m/%Y, %H:%M")
 
+How to query venues
+> # select city, state, ARRAY_AGG(name||','||address||','||phone||','||genres) from venue group by city, state;
+
+> print(db.session.query(Venue.state, Venue.city, func.array_agg(array([Venue.address, Venue.name, Venue.phone, Venue.genres]))).group_by(Venue.state, Venue.city).all())
 
 I tried to graduate through submitting My Personal ID Card But I Get this error( Error: Unsupported document type)
 > Try a valid passport or driving license or you can send [email](fwd-support@udacity.com) to the support team with your personal ID and they should graduate you manually.
