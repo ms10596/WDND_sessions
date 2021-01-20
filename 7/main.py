@@ -2,33 +2,26 @@ from flask import Flask, request, abort
 
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return "hello world"
+@app.route("/login")
+def login():
+    email = request.args.get("email")
+    password = request.args.get("password")
 
-@app.route("/secure")
-def secure():
-    password = request.headers["Authorization"]
-    password = password.split()[1]
-    
-    if password == "1234":
-        return {
-            "secure_data": 9988736
-        }
+    if email == "mail@mail.com" and password == "123456":
+        return "**#mail@mail.com__0"
     else:
         abort(401)
 
 
+@app.route("/secure")
+def secure_route():
+    token = request.headers.get("Authorization")
+    token = token.split()[1]
 
-# for i in range(0, 2000):
-# ...     res = requests.get("http://localhost:5000/secure", headers={'Authorization': f'bearer {i}'})
-# ...     if res.status_code == 200:
-# ...             print(i)
-
-
-
-
-
+    if token == "**#mail@mail.com__0":
+        return "very confidential data"
+    else:
+        abort(403)
 
 
 
@@ -53,16 +46,17 @@ def secure():
 
 # def check_type(func):
 #     def wrapper(*args, **kwargs):
+#         print("This function name is:", func.__name__)
+#         print(func.__doc__)
 #         if type(args[0]) == int and type(args[1]) == int:
-#             return func(args[0], args[1])
+#             return func(*args, **kwargs)
 #         else:
-#             return "Please enter numbers only"
+#           return "cannot do the operation"
 #     return wrapper
-
 
 # @check_type
 # def add(a, b):
-#     return a +b
+#     return a + b
 
 # @check_type
 # def subtract(a, b):
@@ -72,36 +66,5 @@ def secure():
 # def multiply(a, b):
 #     return a * b
 
-# print(subtract(55, 63))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def add(**kwargs):
-#     if 'a' in kwargs and 'b' in kwargs:
-#         return kwargs['a'] + kwargs['b']
-#     else:
-#         return "arguments are not correct"
-
-
-# print(add(a=5,c=6))
-
-
-# add(5,6) --> arguments (args)
-# add(a=5, b=6) --> Keyword arguments (kwargs)
+# print(add(5, 23))

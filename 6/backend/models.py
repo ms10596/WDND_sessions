@@ -24,6 +24,9 @@ class Post(db.Model):
     body = db.Column(db.String())
     user_id = db.Column(db.Integer, db.ForeignKey(User.id))
 
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
     def __repr__(self):
         return f"<id:{self.id}, body:{self.body}>\n"
 

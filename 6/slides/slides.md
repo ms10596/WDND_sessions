@@ -12,10 +12,10 @@ theme: gaia
 
 ---
 # Why testing?
-* To confirm expected request handling behavior
-* To confirm success-response structure is correct
-* To confirm expected errors are handled appropriately
-* To confirm CRUD operations persist
+* Quality Assurance
+* Prevent issues in production.
+* Faster development cycles.
+* Make application maintainable
 ---
 # Basic blocks of testing in python.
 ```python
@@ -35,8 +35,9 @@ class Mytestcase(unittest.TestCase):
 ```
 ---
 # Why Documentation?
-* To be used by others without contacting me.
-* To be understood by others
+* Helps other developers contribute to our project
+* Ease of use.
+* Familiarity with endpoints
 
 ---
 # Basic blocks of documentation

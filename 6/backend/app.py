@@ -24,6 +24,16 @@ def create_app():
         posts = [i.format() for i in posts]
         return jsonify(posts=posts, total=total)
 
+    @app.route("/posts", methods=["POST"])
+    def insert_post():
+        """this function insert post"""
+        post = Post(**request.json)
+        post.insert()
+
+        return jsonify(id=post.id)
+        # return "hello"
+
+    
     @app.errorhandler(405)
     def handle405(e):
         return jsonify(message="Method not allowed"), 405
