@@ -1,5 +1,5 @@
-YOUR_DOMAIN = ""
-API_IDENTIFIER = ""
+YOUR_DOMAIN = 'ms10596.us.auth0.com'
+API_IDENTIFIER = "sunday"
 YOUR_CLIENT_ID = ""
 YOUR_CALLBACK_URI = "http://127.0.0.1:8100/tabs/user-page"
 

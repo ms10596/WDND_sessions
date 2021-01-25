@@ -16,6 +16,9 @@ Week 8	| Identity and Access Management |	Passwords <br> Access and Authorizatio
 Week 9	| Identity and Access Management |	Thinking Adversarially <br> **Submit P3: Coffee shop full stack**
 
 # FAQ
+I'm facing errors after cloning the project and installing the requirements.
+> Make sure you're using python3.7 version
+
 Setting environment variables
 > *nix based systems: 
 ```export FLASK_APP=main FLASK_ENV=development```

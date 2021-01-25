@@ -37,16 +37,13 @@ authorize?audience=sunday
 
 Hashing | Encryption
 --- | ---
- Cannot be decoded | Can be decoded using a key    
- To attack: Rainbow table | To attack: Brute Force
- SHA256, MD5 | DES, AES, 3DES, bcrypt, scrypt
+ One way function |  Two way function
+ MD5, SHA* | AES, DES, Caeser cipher
 
 
 Symmetric | Asymettric Encryption
 --- | ---
- Needs only one key to encode & decode | Needs public key to encrypt and private key to decrypt or vice versa.
+  Same key for encryption and decryption | Private key for encryption and public key for decryption 
 ---
 
 ![bg 75%](../../udacity.gif)
-
-> [_](https://docs.google.com/forms/d/e/1FAIpQLSe22HYBxvujLSY6nrvu_poLv4FBDS1allyPqJn18DhnSNep6A/viewform?usp=sf_link)
